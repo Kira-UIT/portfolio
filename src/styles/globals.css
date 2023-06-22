@@ -92,3 +92,39 @@ body {
   top: 50%;
   clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 }
+
+.hexagon {
+  width: 540px;
+  height: 467.64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background: rgb(74, 222, 128);
+  clip-path: polygon(50% 2%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  -webkit-clip-path: polygon(
+    50% 2%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0 75%,
+    0 25%
+  );
+  -moz-clip-path: polygon(50% 2%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.hexagon-background {
+  background-color: white;
+  width: 500px;
+  height: 433px;
+  clip-path: polygon(50% 2%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  -webkit-clip-path: polygon(
+    50% 2%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0 75%,
+    0 25%
+  );
+  -moz-clip-path: polygon(50% 2%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}

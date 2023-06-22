@@ -4,7 +4,7 @@ import { Logo } from "@/components";
 
 const Header: FC = () => {
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 flex h-16 w-full items-center px-4 backdrop-blur-md md:px-6 lg:px-10">
+    <header className="fixed left-0 right-0 top-0 z-50 flex h-16 w-full items-center px-[10%] backdrop-blur-md">
       <Link href="/" className="group text-3xl font-bold">
         <Logo />
       </Link>
