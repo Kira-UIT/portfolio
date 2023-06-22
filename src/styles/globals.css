@@ -2,26 +2,93 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start: 214, 219, 220;
+  --background-end: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start: #0a0a0a;
+    --background-end: #09090b;
   }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, var(--background-end))
+    var(--background-start);
+  scroll-behavior: smooth;
+}
+
+.navigate-element {
+  position: relative;
+  padding: 0 1rem;
+  display: block;
+}
+
+.navigate-element:hover {
+  color: rgb(74, 222, 128);
+}
+
+.navigate-element::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  left: 50%;
+  bottom: -8%;
+  background: rgb(74, 222, 128);
+  transform: translateX(-50%);
+  transition: width 0.3s;
+}
+
+.navigate-element:hover::after {
+  width: 50% !important;
+}
+
+.fancy-border {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  width: 500px;
+  height: 500px;
+
+  background-color: #dbf26e;
+  background-image: linear-gradient(
+    319deg,
+    #dbf26e 0%,
+    #61fa74 37%,
+    #1cfdd6 100%
+  );
+}
+
+.banner {
+  height: calc(100vh - 64px);
+}
+
+/* Logo */
+.logo {
+  position: relative;
+  font-size: 2rem;
+}
+
+.logo h1 {
+  position: absolute;
+  color: rgb(74, 222, 128);
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 }
