@@ -5,13 +5,13 @@ const Banner: FC = () => {
   return (
     <div
       id="banner"
-      className="banner relative flex w-full items-center justify-between gap-8"
+      className="banner flex min-h-screen flex-col-reverse items-center justify-center gap-8 lg:flex-row lg:justify-between"
     >
-      <div className=" z-10 space-y-6 uppercase">
+      <div className="z-10 space-y-4 uppercase relative">
         <h2 className="text-4xl">Hi, I&apos;m</h2>
-        <h2 className="text-9xl font-bold text-green-400">Kira</h2>
-        <h3 className="text-5xl font-bold">Full Stack Developer</h3>
-        <p className="max-w-xl">
+        <h2 className="text-5xl font-bold text-green-400 md:text-9xl">Kira</h2>
+        <h3 className="text-3xl font-bold md:text-5xl">Full Stack Developer</h3>
+        <p className="max-w-xl text-justify">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe sed
           eveniet laudantium, id impedit sapiente, recusandae culpa, odio quasi
           ipsam tempore? Natus, magni. Ratione molestiae perspiciatis repellat
@@ -20,8 +20,8 @@ const Banner: FC = () => {
         <div className="flex gap-8">
           <Link href="https://github.com/" target="_blank">
             <svg
-              width="46"
-              height="46"
+              width="32"
+              height="32"
               fill="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -31,8 +31,8 @@ const Banner: FC = () => {
           </Link>
           <Link href="https://facebook.com/" target="_blank">
             <svg
-              width="46"
-              height="46"
+              width="32"
+              height="32"
               fill="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -42,8 +42,8 @@ const Banner: FC = () => {
           </Link>
           <Link href="https://www.instagram.com/" target="_blank">
             <svg
-              width="46"
-              height="46"
+              width="32"
+              height="32"
               fill="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -53,8 +53,8 @@ const Banner: FC = () => {
           </Link>
           <Link href="https://web.telegram.org/" target="_blank">
             <svg
-              width="46"
-              height="46"
+              width="32"
+              height="32"
               fill="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
@@ -78,8 +78,8 @@ const Banner: FC = () => {
           </Link>
         </div>
       </div>
-      <div className="">
-        <div className="fancy-border ml-auto" />
+      <div>
+        <div className="fancy-border h-[250px] w-[250px] sm:h-[300px] sm:w-[300px] md:h-[400px] md:w-[400px] lg:h-[500px] lg:w-[500px]" />
       </div>
     </div>
   );

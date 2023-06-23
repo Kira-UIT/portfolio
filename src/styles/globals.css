@@ -62,8 +62,6 @@ body {
 
 .fancy-border {
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  width: 500px;
-  height: 500px;
 
   background-color: #dbf26e;
   background-image: linear-gradient(
@@ -72,10 +70,6 @@ body {
     #61fa74 37%,
     #1cfdd6 100%
   );
-}
-
-.banner {
-  height: calc(100vh - 64px);
 }
 
 /* Logo */

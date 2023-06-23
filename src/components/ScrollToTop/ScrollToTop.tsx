@@ -26,11 +26,11 @@ const ScrollToTop: FC<IScrollToTopProps> = (props) => {
       <div className="flex items-center justify-center">
         <button
           onClick={scrollToTopHandler}
-          className="rounded-lg bg-gradient-to-r from-green-400 via-green-500 to-green-600 p-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-br"
+          className="rounded-lg bg-gradient-to-r from-green-400 via-green-500 to-green-600 p-2 text-center text-sm font-medium text-white hover:bg-gradient-to-br"
         >
           <svg
-            width="32"
-            height="32"
+            width="24"
+            height="24"
             fill="none"
             stroke="currentColor"
             strokeLinecap="round"

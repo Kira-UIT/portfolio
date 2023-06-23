@@ -19,17 +19,15 @@ export default function Home() {
       <Head>
         <title>Kira | Fullstack Developer</title>
       </Head>
-      <Header />
-      <main
-        className={`z-10 mt-16 flex min-h-screen flex-col px-[10%] ${inter.className}`}
-      >
+      <main className={`z-0 mx-auto mt-16 w-full px-[10%] ${inter.className}`}>
+        <Header />
         <Banner />
         <AboutMe />
         <Portfolio />
         <Project />
         <ContactMe />
+        <ScrollToTop />
       </main>
-      <ScrollToTop />
       <Footer />
     </>
   );
