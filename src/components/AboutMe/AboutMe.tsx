@@ -12,7 +12,7 @@ const AboutMe: FC = () => {
         </div> */}
         <div>
           <h2 className="mb-8 text-center text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-            About Me
+            About <span className="text-green-400">Me</span>
           </h2>
           <article className="text-justify text-xl">
             Hi, I&rsquo;m Kira - the student of the University of Information

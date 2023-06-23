@@ -1,3 +1,4 @@
+import { useRouter } from "next/router";
 import { FC, useEffect, useState } from "react";
 
 interface IScrollToTopProps {
@@ -6,10 +7,13 @@ interface IScrollToTopProps {
 
 const ScrollToTop: FC<IScrollToTopProps> = (props) => {
   const { top = 20 } = props;
+  const router = useRouter();
   const [visible, setVisible] = useState<boolean>(false);
 
   const scrollToTopHandler = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    router.replace("/");
+    console.log(router.asPath);
   };
 
   useEffect(() => {

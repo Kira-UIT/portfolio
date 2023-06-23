@@ -7,21 +7,21 @@ export const navigation = [
   {
     id: 2,
     name: "About Me",
-    path: "#about-me",
+    path: "/#about-me",
   },
   {
     id: 3,
     name: "Portfolio",
-    path: "#portfolio",
+    path: "/#portfolio",
   },
   {
     id: 4,
     name: "Projects",
-    path: "#projects",
+    path: "/#projects",
   },
   {
     id: 5,
     name: "Contact Me",
-    path: "#contact-me",
+    path: "/#contact-me",
   },
 ];

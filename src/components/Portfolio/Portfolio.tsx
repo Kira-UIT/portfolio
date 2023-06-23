@@ -6,9 +6,9 @@ const Portfolio: FC = () => {
   return (
     <div id="portfolio" className="min-h-screen pt-16">
       <h2 className="mb-8 text-center text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-        Portfolio
+        Port<span className="text-green-400">folio</span>
       </h2>
-      <div className="grid grid-cols-2 lg:divide-x">
+      <div className="grid grid-cols-2">
         <div className="col-span-2 space-y-2 lg:col-span-1">
           <h2 className="mb-4 flex items-center justify-center text-xl font-semibold">
             <span className="text-green-400">
@@ -137,32 +137,32 @@ const Portfolio: FC = () => {
                 1
               </div>
               <div>
-                <h1 className="text-xl font-bold text-green-400 flex items-center ">
-                  <span>FPT Software</span>
-                  <span>
-                    <Link
-                      href="https://fptsoftware.com/"
-                      target="_blank"
-                      className="cursor-pointer hover:text-green-400"
-                    >
-                      <svg
-                        width="20"
-                        height="20"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5"></path>
-                        <path d="M10 14 20 4"></path>
-                        <path d="M15 4h5v5"></path>
-                      </svg>
-                    </Link>
+                <div className="flex items-center gap-2">
+                  <span className="text-xl font-bold text-green-400">
+                    FPT Software
                   </span>
-                </h1>
+                  <Link
+                    href="https://fptsoftware.com/"
+                    target="_blank"
+                    className="cursor-pointer hover:text-green-400"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5"></path>
+                      <path d="M10 14 20 4"></path>
+                      <path d="M15 4h5v5"></path>
+                    </svg>
+                  </Link>
+                </div>
                 <div>Front-end Developer ReactJS</div>
                 <div>Mar, 2022 - Present</div>
               </div>

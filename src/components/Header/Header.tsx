@@ -1,20 +1,28 @@
 import { Logo } from "@/components";
 import { navigation } from "@/constants/navigation";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { FC, useState } from "react";
 
 const Header: FC = () => {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const toggleMenu = () => setIsOpen(!isOpen);
+
   return (
     <header className="fixed left-0 right-0 top-0 z-50 flex h-16 w-full items-center justify-between px-[10%] backdrop-blur-md">
-      <Link href="/" className="group text-3xl font-bold">
+      <Link href="/" className="group text-3xl font-bold" replace>
         <Logo />
       </Link>
       <nav className="hidden sm:block">
         <ul className="flex items-center justify-end font-semibold">
           {navigation.map((nav) => (
-            <li key={nav.id} className="navigate-element">
+            <li
+              key={nav.id}
+              className={`navigate-element ${
+                router.asPath === nav.path ? "active" : ""
+              }`}
+            >
               <Link href={nav.path}>{nav.name}</Link>
             </li>
           ))}
@@ -60,6 +68,7 @@ const Header: FC = () => {
                 <Link
                   href={nav.path}
                   className="block p-2 text-center hover:bg-gray-100 hover:text-green-400"
+                  replace
                 >
                   {nav.name}
                 </Link>
