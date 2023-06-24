@@ -6,12 +6,12 @@ const Portfolio: FC = () => {
   return (
     <div id="portfolio" className="min-h-screen pt-16">
       <h2 className="mb-8 text-center text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-        Port<span className="text-green-400">folio</span>
+        Port<span className="text-green-500">folio</span>
       </h2>
       <div className="grid grid-cols-2">
         <div className="col-span-2 space-y-2 lg:col-span-1">
           <h2 className="mb-4 flex items-center justify-center text-xl font-semibold">
-            <span className="text-green-400">
+            <span className="text-green-500">
               <svg
                 width="32"
                 height="32"
@@ -42,13 +42,13 @@ const Portfolio: FC = () => {
                 </svg>
               </span>
               <div className="flex items-center gap-2">
-                <span className="text-xl font-bold text-green-400">
+                <span className="text-xl font-bold text-green-500">
                   University of Information Technology
                 </span>
                 <Link
                   href="https://www.uit.edu.vn/"
                   target="_blank"
-                  className="cursor-pointer hover:text-green-400"
+                  className="cursor-pointer hover:text-green-500"
                 >
                   <svg
                     width="20"
@@ -118,7 +118,7 @@ const Portfolio: FC = () => {
         </div>
         <div className="col-span-2 lg:col-span-1">
           <h2 className="mb-4 flex items-center justify-center text-xl font-semibold">
-            <span className="text-green-400">
+            <span className="text-green-500">
               <svg
                 width="32"
                 height="32"
@@ -138,13 +138,13 @@ const Portfolio: FC = () => {
               </div>
               <div>
                 <div className="flex items-center gap-2">
-                  <span className="text-xl font-bold text-green-400">
+                  <span className="text-xl font-bold text-green-500">
                     FPT Software
                   </span>
                   <Link
                     href="https://fptsoftware.com/"
                     target="_blank"
-                    className="cursor-pointer hover:text-green-400"
+                    className="cursor-pointer hover:text-green-500"
                   >
                     <svg
                       width="20"

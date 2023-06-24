@@ -26,11 +26,15 @@ const ScrollToTop: FC<IScrollToTopProps> = (props) => {
   }, [top]);
 
   return (
-    <div className={`${visible ? "fixed" : "hidden"} bottom-12 right-12`}>
+    <div
+      className={`${
+        visible ? "fixed" : "hidden"
+      } bottom-12 right-12 animate-bounce`}
+    >
       <div className="flex items-center justify-center">
         <button
           onClick={scrollToTopHandler}
-          className="rounded-lg bg-gradient-to-r from-green-400 via-green-500 to-green-600 p-2 text-center text-sm font-medium text-white hover:bg-gradient-to-br"
+          className="rounded-lg bg-gradient-to-r from-green-500 via-green-600 to-green-600 p-2 text-center text-sm font-medium text-white hover:bg-gradient-to-br"
         >
           <svg
             width="24"

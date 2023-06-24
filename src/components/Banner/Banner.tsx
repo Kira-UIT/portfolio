@@ -10,13 +10,15 @@ const Banner: FC = () => {
     >
       <div className="relative z-10 space-y-4 uppercase">
         <h2 className="text-4xl">Hi, I&apos;m</h2>
-        <div className="nickname text-5xl font-bold md:text-9xl">
-          <h2 className="text-5xl font-bold md:text-9xl">
+        <div className="nickname relative text-5xl font-bold md:text-9xl">
+          <h2 className="animate-water-animation text-5xl font-bold md:text-9xl">
             Kira
           </h2>
           Kira
         </div>
-        <h3 className="text-3xl font-bold md:text-5xl">Full Stack Developer</h3>
+        <h3 className="text-3xl font-bold text-green-500 md:text-5xl">
+          Full Stack Developer
+        </h3>
         <p className="max-w-xl text-justify">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe sed
           eveniet laudantium, id impedit sapiente, recusandae culpa, odio quasi
@@ -29,7 +31,7 @@ const Banner: FC = () => {
               key={item.id}
               href={item.path}
               target="_blank"
-              className="hover:text-green-400"
+              className="hover:text-green-500"
             >
               {item.icon}
             </Link>
@@ -38,14 +40,14 @@ const Banner: FC = () => {
         <div>
           <Link
             href="#portfolio"
-            className="mb-2 mr-2 inline-flex items-center rounded-lg bg-gradient-to-r from-green-400 via-green-500 to-green-600 py-2.5 pl-5 pr-3 text-center text-sm font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-green-300 dark:focus:ring-green-800"
+            className="mb-2 mr-2 inline-flex items-center rounded-lg bg-gradient-to-r from-green-500 via-green-600 to-green-600 py-2.5 pl-5 pr-3 text-center text-sm font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-green-300 dark:focus:ring-green-800"
             replace
           >
             Explore my portfolio &#x27F6;
           </Link>
           <Link
             href="#contact-me"
-            className="mb-2 mr-2 inline-flex items-center rounded-lg bg-gradient-to-r from-green-400 via-green-500 to-green-600 py-2.5 pl-5 pr-3 text-center text-sm font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-green-300 dark:focus:ring-green-800"
+            className="mb-2 mr-2 inline-flex items-center rounded-lg bg-gradient-to-r from-green-500 via-green-600 to-green-600 py-2.5 pl-5 pr-3 text-center text-sm font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-green-300 dark:focus:ring-green-800"
             replace
           >
             Connect with me &#x27F6;

@@ -5,12 +5,15 @@ const ContactMe: FC = () => {
     <div id="contact-me" className="min-h-screen pt-16">
       <div className="mx-auto max-w-screen-md px-4 py-8 lg:py-16">
         <h2 className="mb-4 text-center text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-          Contact <span className="text-green-400">Me!</span>
+          Contact <span className="text-green-500">Me!</span>
         </h2>
         <p className="mb-8 text-center font-light text-gray-500 dark:text-gray-400 sm:text-xl lg:mb-16">
           Any questions or remarks? Just write me a message
         </p>
-        <form action="#" className="space-y-8 p-8 bg-zinc-800 rounded-lg">
+        <form
+          action="#"
+          className="space-y-8 p-8 dark:bg-zinc-800 border rounded-lg"
+        >
           <div>
             <label
               htmlFor="email"
@@ -57,7 +60,7 @@ const ContactMe: FC = () => {
           </div>
           <button
             type="submit"
-            className="mb-2 mr-2 rounded-lg bg-gradient-to-r from-green-400 via-green-500 to-green-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-green-300 dark:focus:ring-green-800"
+            className="mb-2 mr-2 rounded-lg bg-gradient-to-r from-green-500 via-green-600 to-green-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-green-300 dark:focus:ring-green-800"
           >
             Send message
           </button>

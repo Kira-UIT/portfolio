@@ -2,16 +2,14 @@ import {
   AboutMe,
   Banner,
   ContactMe,
-  Footer,
   Header,
+  Layout,
   Portfolio,
   Project,
   ScrollToTop,
 } from "@/components";
-import { Inter } from "next/font/google";
 import Head from "next/head";
-
-const inter = Inter({ subsets: ["latin"] });
+import { ReactElement } from "react";
 
 export default function Home() {
   return (
@@ -19,16 +17,16 @@ export default function Home() {
       <Head>
         <title>Kira | Fullstack Developer</title>
       </Head>
-      <main className={`z-0 mx-auto mt-16 w-full px-[10%] ${inter.className}`}>
-        <Header />
-        <Banner />
-        <AboutMe />
-        <Portfolio />
-        <Project />
-        <ContactMe />
-        <ScrollToTop />
-      </main>
-      <Footer />
+      <Banner />
+      <AboutMe />
+      <Portfolio />
+      <Project />
+      <ContactMe />
+      <ScrollToTop />
     </>
   );
 }
+
+Home.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
+};

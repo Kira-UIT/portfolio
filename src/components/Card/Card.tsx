@@ -17,7 +17,7 @@ const Card: FC<IProjectProps> = (props: IProjectProps) => {
       </Link>
       <div className="p-5">
         <Link href="/">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 hover:text-green-400 dark:text-white">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 hover:text-green-500 dark:text-white">
             {title}
           </h5>
         </Link>
@@ -26,7 +26,7 @@ const Card: FC<IProjectProps> = (props: IProjectProps) => {
         </p>
         <Link
           href="#portfolio"
-          className="mb-2 mr-2 inline-flex items-center rounded-lg bg-gradient-to-r from-green-400 via-green-500 to-green-600 py-2.5 pl-5 pr-3 text-center text-sm font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-green-300 dark:focus:ring-green-800"
+          className="mb-2 mr-2 inline-flex items-center rounded-lg bg-gradient-to-r from-green-500 via-green-600 to-green-600 py-2.5 pl-5 pr-3 text-center text-sm font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-green-300 dark:focus:ring-green-800"
         >
           Read more
           <svg

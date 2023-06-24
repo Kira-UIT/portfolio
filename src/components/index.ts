@@ -8,3 +8,5 @@ export { default as Portfolio } from "./Portfolio/Portfolio";
 export { default as Project } from "./Project/Project";
 export { default as Footer } from "./Footer/Footer";
 export { default as ScrollToTop } from "./ScrollToTop/ScrollToTop";
+export { default as Layout } from "./Layout/Layout";
+export { default as ModeSettings } from "./ModeSettings/ModeSettings";

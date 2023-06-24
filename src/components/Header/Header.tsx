@@ -29,7 +29,7 @@ const Header: FC = () => {
         </ul>
       </nav>
       <div
-        className="cursor-pointer transition-colors duration-300 hover:text-green-400 sm:hidden"
+        className="cursor-pointer transition-colors duration-300 hover:text-green-500 sm:hidden"
         onClick={toggleMenu}
       >
         <svg
@@ -48,7 +48,7 @@ const Header: FC = () => {
         } h-screen w-screen bg-white duration-300`}
       >
         <div
-          className="z-50 mr-4 mt-4 flex cursor-pointer items-center justify-end text-black hover:text-green-400"
+          className="z-50 mr-4 mt-4 flex cursor-pointer items-center justify-end text-black hover:text-green-500"
           onClick={toggleMenu}
         >
           <svg
@@ -67,7 +67,7 @@ const Header: FC = () => {
               <li key={nav.id} onClick={toggleMenu}>
                 <Link
                   href={nav.path}
-                  className="block p-2 text-center hover:bg-gray-100 hover:text-green-400"
+                  className="block p-2 text-center hover:bg-gray-100 hover:text-green-500"
                   replace
                 >
                   {nav.name}
