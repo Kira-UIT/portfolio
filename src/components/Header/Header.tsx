@@ -19,8 +19,10 @@ const Header: FC = () => {
           {navigation.map((nav) => (
             <li
               key={nav.id}
-              className={`navigate-element ${
-                router.asPath === nav.path ? "active" : ""
+              className={`navigate-element relative px-4 transition-colors duration-300 after:absolute after:-bottom-[8%] after:left-1/2 after:h-[3px] after:-translate-x-1/2 after:bg-green-500 after:transition-all after:duration-300 hover:text-green-500 hover:after:w-1/2 ${
+                router.asPath === nav.path
+                  ? " text-green-500 after:w-1/2"
+                  : "after:w-0"
               }`}
             >
               <Link href={nav.path}>{nav.name}</Link>

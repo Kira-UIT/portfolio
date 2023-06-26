@@ -8,22 +8,21 @@ const Banner: FC = () => {
       id="banner"
       className="banner flex min-h-screen flex-col-reverse items-center justify-center gap-8 lg:flex-row lg:justify-between"
     >
-      <div className="relative z-10 space-y-4 uppercase">
+      <div className="relative z-10 space-y-4">
         <h2 className="text-4xl">Hi, I&apos;m</h2>
-        <div className="nickname relative text-5xl font-bold md:text-9xl">
-          <h2 className="animate-water-animation text-5xl font-bold md:text-9xl">
+        <div className="relative text-5xl font-bold md:text-9xl uppercase">
+          Kira
+          <h2 className="absolute left-0 top-0 animate-water-animation text-5xl font-bold text-green-500 md:text-9xl">
             Kira
           </h2>
-          Kira
         </div>
         <h3 className="text-3xl font-bold text-green-500 md:text-5xl">
           Full Stack Developer
         </h3>
-        <p className="max-w-xl text-justify">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe sed
-          eveniet laudantium, id impedit sapiente, recusandae culpa, odio quasi
-          ipsam tempore? Natus, magni. Ratione molestiae perspiciatis repellat
-          eligendi distinctio velit?
+        <p className="max-w-xl">
+          Resolving design problems, building smart user interfaces and useful
+          interactions, developing rich web applications and seamless web
+          experiences.
         </p>
         <div className="flex gap-8">
           {socialMedias.map((item) => (

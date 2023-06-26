@@ -2,81 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  --scroll-behavior: smooth !important;
-  scroll-behavior: smooth !important;
-}
-
-:root {
-  --primary-color: 
-  --foreground-rgb: 0, 0, 0;
-  --background-start: 214, 219, 220;
-  --background-end: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start: #0a0a0a;
-    --background-end: #09090b;
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 @layer base {
   body {
-    @apply bg-white dark:bg-gray-900;
+    @apply bg-slate-300 dark:bg-zinc-900;
   }
 }
 
 body {
   scroll-behavior: smooth;
-}
-
-.navigate-element {
-  position: relative;
-  padding: 0 1rem;
-  display: block;
-}
-
-.navigate-element.active,
-.navigate-element:hover {
-  @apply text-green-500;
-}
-
-.navigate-element.active::after,
-.navigate-element::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 3px;
-  left: 50%;
-  bottom: -8%;
-  @apply bg-green-500;
-  transform: translateX(-50%);
-  transition: width 0.3s;
-}
-
-.navigate-element.active::after,
-.navigate-element:hover::after {
-  width: 50% !important;
-}
-
-.nickname {
-  position: relative;
-}
-
-.nickname h2 {
-  position: absolute;
-  @apply text-green-500;
-  left: 0;
-  top: 0;
-  /* animation: water-animation 4s ease-in-out infinite; */
 }
 
 .fancy-border {
@@ -91,18 +34,7 @@ body {
   );
 }
 
-/* Logo */
-.logo {
-  position: relative;
-  font-size: 2rem;
-}
-
 .logo h1 {
-  position: absolute;
-  @apply text-green-500;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
   clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 }
 
@@ -140,35 +72,4 @@ body {
     0 25%
   );
   -moz-clip-path: polygon(50% 2%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-}
-
-@keyframes water-animation {
-  0%,
-  100% {
-    clip-path: polygon(
-      0% 45%,
-      16% 44%,
-      33% 50%,
-      54% 60%,
-      70% 61%,
-      84% 59%,
-      100% 52%,
-      100% 100%,
-      0% 100%
-    );
-  }
-
-  50% {
-    clip-path: polygon(
-      0% 60%,
-      15% 65%,
-      34% 66%,
-      51% 62%,
-      67% 50%,
-      84% 45%,
-      100% 46%,
-      100% 100%,
-      0% 100%
-    );
-  }
 }
