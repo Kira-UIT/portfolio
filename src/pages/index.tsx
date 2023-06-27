@@ -2,11 +2,10 @@ import {
   AboutMe,
   Banner,
   ContactMe,
-  Header,
   Layout,
   Portfolio,
   Project,
-  ScrollToTop,
+  ScrollToTop
 } from "@/components";
 import Head from "next/head";
 import { ReactElement } from "react";

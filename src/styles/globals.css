@@ -2,6 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .preset-green {
+    --primary-color: #22c55e;
+    --primary-color-hover: #16a34a;
+    --gradient-color-first: #69ff97;
+    --gradient-color-second: #00e4ff;
+  }
+
+  .preset-sky {
+    --primary-color: #3b82f6;
+    --primary-color-hover: #2563eb;
+    --gradient-color-first: #4c83ff;
+    --gradient-color-second: #2afadf;
+  }
+
+  .preset-purple {
+    --primary-color: #a855f7;
+    --primary-color-hover: #9333ea;
+    --gradient-color-first: #9f44d3;
+    --gradient-color-second: #e2b0ff;
+  }
+
+  .preset-blue {
+    --primary-color: #0ea5e9;
+    --primary-color-hover: #0284c7;
+    --gradient-color-first: #130cb7;
+    --gradient-color-second: #52e5e7;
+  }
+
+  .preset-orange {
+    --primary-color: #f97316;
+    --primary-color-hover: #ea580c;
+    --gradient-color-first: #de4313;
+    --gradient-color-second: #fec163;
+  }
+
+  .preset-red {
+    --primary-color: #ef4444;
+    --primary-color-hover: #dc2626;
+    --gradient-color-first: #e80505;
+    --gradient-color-second: #fdd819;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +58,7 @@ html {
 
 @layer base {
   body {
-    @apply bg-slate-300 dark:bg-zinc-900;
+    @apply bg-slate-50 transition-colors duration-500 ease-in-out dark:bg-zinc-900;
   }
 }
 
@@ -24,13 +68,13 @@ body {
 
 .fancy-border {
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  transition: all ease-in-out 0.5s;
 
-  background-color: #dbf26e;
+  background-color: var(--gradient-color-first);
   background-image: linear-gradient(
-    319deg,
-    #dbf26e 0%,
-    #61fa74 37%,
-    #1cfdd6 100%
+    135deg,
+    var(--gradient-color-first) 10%,
+    var(--gradient-color-second) 100%
   );
 }
 
@@ -45,7 +89,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  @apply bg-green-500;
+  @apply bg-primary;
   clip-path: polygon(50% 2%, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   -webkit-clip-path: polygon(
     50% 2%,

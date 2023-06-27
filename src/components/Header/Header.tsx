@@ -19,9 +19,9 @@ const Header: FC = () => {
           {navigation.map((nav) => (
             <li
               key={nav.id}
-              className={`navigate-element relative px-4 transition-colors duration-300 after:absolute after:-bottom-[8%] after:left-1/2 after:h-[3px] after:-translate-x-1/2 after:bg-green-500 after:transition-all after:duration-300 hover:text-green-500 hover:after:w-1/2 ${
+              className={`navigate-element relative px-4 transition-colors duration-300 after:absolute after:-bottom-[8%] after:left-1/2 after:h-[3px] after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 hover:text-primary hover:after:w-1/2 ${
                 router.asPath === nav.path
-                  ? " text-green-500 after:w-1/2"
+                  ? " text-primary after:w-1/2"
                   : "after:w-0"
               }`}
             >
@@ -31,7 +31,7 @@ const Header: FC = () => {
         </ul>
       </nav>
       <div
-        className="cursor-pointer transition-colors duration-300 hover:text-green-500 sm:hidden"
+        className="cursor-pointer transition-colors duration-300 hover:text-primary sm:hidden"
         onClick={toggleMenu}
       >
         <svg
@@ -50,7 +50,7 @@ const Header: FC = () => {
         } h-screen w-screen bg-white duration-300`}
       >
         <div
-          className="z-50 mr-4 mt-4 flex cursor-pointer items-center justify-end text-black hover:text-green-500"
+          className="z-50 mr-4 mt-4 flex cursor-pointer items-center justify-end text-black hover:text-primary"
           onClick={toggleMenu}
         >
           <svg
@@ -69,7 +69,7 @@ const Header: FC = () => {
               <li key={nav.id} onClick={toggleMenu}>
                 <Link
                   href={nav.path}
-                  className="block p-2 text-center hover:bg-gray-100 hover:text-green-500"
+                  className="block p-2 text-center hover:bg-gray-100 hover:text-primary"
                   replace
                 >
                   {nav.name}

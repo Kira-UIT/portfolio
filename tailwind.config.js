@@ -8,6 +8,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "var(--primary-color)",
+        "primary-hover": "var(--primary-color-hover)",
+      },
+      textColor: {
+        primary: "var(--primary-color)",
+        "primary-hover": "var(--primary-color-hover)",
+      },
+      backgroundColor: {
+        primary: "var(--primary-color)",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

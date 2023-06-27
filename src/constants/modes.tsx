@@ -20,7 +20,7 @@ export const primaryColors = [
   },
   {
     id: 2,
-    color: "bg-green-500",
+    color: "bg-primary",
   },
   {
     id: 3,

@@ -1,18 +1,22 @@
 import React, { FC } from "react";
+import { PrimaryButton } from "@/components";
 
 const ContactMe: FC = () => {
   return (
     <div id="contact-me" className="min-h-screen pt-16">
       <div className="mx-auto max-w-screen-md px-4 py-8 lg:py-16">
         <h2 className="mb-4 text-center text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-          Contact <span className="text-green-500">Me!</span>
+          Contact{" "}
+          <span className="text-primary transition-colors duration-500 ease-linear">
+            Me!
+          </span>
         </h2>
         <p className="mb-8 text-center font-light text-gray-500 dark:text-gray-400 sm:text-xl lg:mb-16">
           Any questions or remarks? Just write me a message
         </p>
         <form
           action="#"
-          className="space-y-8 p-8 dark:bg-zinc-800 border rounded-lg"
+          className="space-y-8 rounded-md border p-8 dark:bg-zinc-800"
         >
           <div>
             <label
@@ -24,7 +28,7 @@ const ContactMe: FC = () => {
             <input
               type="email"
               id="email"
-              className="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
+              className="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light block w-full rounded-md border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
               placeholder="name@gmail.com"
               required
             />
@@ -39,7 +43,7 @@ const ContactMe: FC = () => {
             <input
               type="text"
               id="subject"
-              className="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light block w-full rounded-lg border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
+              className="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light block w-full rounded-md border border-gray-300 bg-gray-50 p-3 text-sm text-gray-900 shadow-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
               placeholder="Let me know how I can help you"
               required
             />
@@ -54,16 +58,11 @@ const ContactMe: FC = () => {
             <textarea
               id="message"
               rows={6}
-              className="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
+              className="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 block w-full rounded-md border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
               placeholder="Leave a comment..."
             ></textarea>
           </div>
-          <button
-            type="submit"
-            className="mb-2 mr-2 rounded-lg bg-gradient-to-r from-green-500 via-green-600 to-green-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-green-300 dark:focus:ring-green-800"
-          >
-            Send message
-          </button>
+          <PrimaryButton type="submit">Send message</PrimaryButton>
         </form>
       </div>
     </div>

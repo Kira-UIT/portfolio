@@ -1,5 +1,7 @@
+import { TopArrowIcon } from "@/utils/medias";
 import { useRouter } from "next/router";
 import { FC, useEffect, useState } from "react";
+import PrimaryButton from "../Button/PrimaryButton";
 
 interface IScrollToTopProps {
   top?: number;
@@ -29,31 +31,9 @@ const ScrollToTop: FC<IScrollToTopProps> = (props) => {
     <div
       className={`${
         visible ? "fixed" : "hidden"
-      } bottom-12 right-12 animate-bounce`}
+      } bottom-12 right-12 animate-bounce bg-primary p-2 hover:bg-primary-hover rounded-md`}
     >
-      <div className="flex items-center justify-center">
-        <button
-          onClick={scrollToTopHandler}
-          className="rounded-lg bg-gradient-to-r from-green-500 via-green-600 to-green-600 p-2 text-center text-sm font-medium text-white hover:bg-gradient-to-br"
-        >
-          <svg
-            width="24"
-            height="24"
-            fill="none"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M12 10v10"></path>
-            <path d="m12 10 4 4"></path>
-            <path d="m12 10-4 4"></path>
-            <path d="M4 4h16"></path>
-          </svg>
-        </button>
-      </div>
+      <TopArrowIcon width={24} height={24} />
     </div>
   );
 };
