@@ -27,6 +27,9 @@ module.exports = {
       animation: {
         "water-animation": "water-animation 4s ease-in-out infinite",
       },
+      transitionTimingFunction: {
+        "in-expo": "cubic-bezier(0.95, 0.05, 0.795, 0.035)",
+      },
       keyframes: {
         "water-animation": {
           "0%, 100%": {

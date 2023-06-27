@@ -31,7 +31,8 @@ const ScrollToTop: FC<IScrollToTopProps> = (props) => {
     <div
       className={`${
         visible ? "fixed" : "hidden"
-      } bottom-12 right-12 animate-bounce bg-primary p-2 hover:bg-primary-hover rounded-md`}
+      } bottom-12 right-12 animate-bounce bg-primary p-2 hover:bg-primary-hover rounded-md cursor-pointer`}
+      onClick={scrollToTopHandler}
     >
       <TopArrowIcon width={24} height={24} />
     </div>

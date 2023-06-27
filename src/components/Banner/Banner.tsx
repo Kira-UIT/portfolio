@@ -37,7 +37,7 @@ const Banner: FC = () => {
             </Link>
           ))}
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           <Link href="#portfolio" replace>
             <PrimaryButton>Explore my portfolio &#x27F6;</PrimaryButton>
           </Link>
@@ -46,9 +46,7 @@ const Banner: FC = () => {
           </Link>
         </div>
       </div>
-      <div>
-        <div className="fancy-border h-[250px] w-[250px] sm:h-[300px] sm:w-[300px] md:h-[400px] md:w-[400px] lg:h-[500px] lg:w-[500px]" />
-      </div>
+      <div className="fancy-border h-[250px] w-[250px] sm:h-[300px] sm:w-[300px] md:h-[400px] md:w-[400px] lg:h-[500px] lg:w-[500px]" />
     </div>
   );
 };
