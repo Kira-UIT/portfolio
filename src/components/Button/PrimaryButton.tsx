@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, FC, HTMLProps, ReactNode } from "react";
+import { ButtonHTMLAttributes, FC, ReactNode } from "react";
 
 type IPrimaryButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   children?: ReactNode;

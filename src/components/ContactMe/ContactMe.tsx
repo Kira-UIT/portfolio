@@ -1,5 +1,5 @@
-import React, { FC } from "react";
 import { PrimaryButton } from "@/components";
+import { FC } from "react";
 
 const ContactMe: FC = () => {
   return (
@@ -60,7 +60,7 @@ const ContactMe: FC = () => {
               rows={6}
               className="focus:ring-primary-500 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500 block w-full rounded-md border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400"
               placeholder="Leave a comment..."
-            ></textarea>
+            />
           </div>
           <PrimaryButton type="submit">Send message</PrimaryButton>
         </form>

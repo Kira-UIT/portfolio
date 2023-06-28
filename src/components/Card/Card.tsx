@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
-import PrimaryButton from "../Button/PrimaryButton";
+import { PrimaryButton } from "@/components";
 import { RightArrowIcon } from "@/utils/medias";
 
 interface IProjectProps {
@@ -19,9 +19,15 @@ const Card: FC<IProjectProps> = (props: IProjectProps) => {
     link = "/",
   } = props;
   return (
-    <div className="rounded-md border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
-      <Link href="/">
-        <Image src={thumbnail} alt="" width={600} height={500} className="rounded-tl-md rounded-tr-md" />
+    <div className="group overflow-hidden rounded-md border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
+      <Link href="/" className="block w-full overflow-hidden rounded-tr-md">
+        <Image
+          src={thumbnail}
+          alt=""
+          width={600}
+          height={500}
+          className="rounded-tl-md transition duration-500 group-hover:scale-110"
+        />
       </Link>
       <div className="p-5">
         <Link href="/">

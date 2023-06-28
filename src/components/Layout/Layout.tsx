@@ -16,7 +16,9 @@ const Layout: FC<ILayoutProps> = (props) => {
     <div className={`${inter.className} ${preset ? preset : "preset-green"}`}>
       <Header />
       <ModeSettings setPreset={setPreset} />
-      <main className={`z-0 mx-auto mt-16 w-full px-4 sm:px-[10%]`}>{children}</main>
+      <main className={`z-0 mx-auto mt-16 w-full px-4 pb-4 sm:px-[10%]`}>
+        {children}
+      </main>
       <Footer />
     </div>
   );
