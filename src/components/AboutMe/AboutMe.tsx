@@ -5,11 +5,6 @@ const AboutMe: FC = () => {
   return (
     <div id="about-me" className="flex min-h-screen items-center pt-16">
       <div className="grid h-full grid-cols-1 gap-4 md:grid-cols-2">
-        {/* <div className="hexagon flex items-center">
-          <div className="hexagon-background">
-            <Image src="/avatar.png" alt="" width={500} height={500} />
-          </div>
-        </div> */}
         <div>
           <h2 className="mb-8 text-center text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
             About <span className="text-primary transition-colors duration-500 ease-linear">Me</span>

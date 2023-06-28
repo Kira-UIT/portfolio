@@ -1,7 +1,6 @@
 import { TopArrowIcon } from "@/utils/medias";
 import { useRouter } from "next/router";
 import { FC, useEffect, useState } from "react";
-import PrimaryButton from "../Button/PrimaryButton";
 
 interface IScrollToTopProps {
   top?: number;
@@ -31,7 +30,7 @@ const ScrollToTop: FC<IScrollToTopProps> = (props) => {
     <div
       className={`${
         visible ? "fixed" : "hidden"
-      } bottom-12 right-12 animate-bounce bg-primary p-2 hover:bg-primary-hover rounded-md cursor-pointer`}
+      } bottom-12 right-12 animate-bounce cursor-pointer rounded-md bg-primary p-2 text-white hover:bg-primary-hover`}
       onClick={scrollToTopHandler}
     >
       <TopArrowIcon width={24} height={24} />

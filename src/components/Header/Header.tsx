@@ -1,5 +1,6 @@
 import { Logo } from "@/components";
 import { navigation } from "@/constants/navigation";
+import { CloseIcon, MenuIcon } from "@/utils/medias";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { FC, useState } from "react";
@@ -10,7 +11,7 @@ const Header: FC = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 flex h-16 w-full items-center justify-between px-[10%] backdrop-blur-md">
+    <header className="fixed left-0 right-0 top-0 z-10 flex h-16 w-full items-center justify-between px-4 backdrop-blur-md sm:px-[10%]">
       <Link href="/" className="group text-3xl font-bold" replace>
         <Logo />
       </Link>
@@ -34,15 +35,7 @@ const Header: FC = () => {
         className="cursor-pointer transition-colors duration-300 hover:text-primary sm:hidden"
         onClick={toggleMenu}
       >
-        <svg
-          width="32"
-          height="32"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M3 18h13v-2H3v2Zm0-5h10v-2H3v2Zm0-7v2h13V6H3Zm18 9.59L17.42 12 21 8.41 19.59 7l-5 5 5 5L21 15.59Z"></path>
-        </svg>
+        <MenuIcon />
       </div>
       <div
         className={`fixed top-0 ${
@@ -53,15 +46,7 @@ const Header: FC = () => {
           className="z-50 mr-4 mt-4 flex cursor-pointer items-center justify-end text-black hover:text-primary"
           onClick={toggleMenu}
         >
-          <svg
-            width="32"
-            height="32"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path>
-          </svg>
+          <CloseIcon />
         </div>
         <nav className="text-black">
           <ul className="font-semibold">

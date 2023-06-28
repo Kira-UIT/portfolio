@@ -1,11 +1,11 @@
 import {
   AboutMe,
-  Banner,
+  Hero,
   ContactMe,
   Layout,
   Portfolio,
   Project,
-  ScrollToTop
+  ScrollToTop,
 } from "@/components";
 import Head from "next/head";
 import { ReactElement } from "react";
@@ -16,7 +16,7 @@ export default function Home() {
       <Head>
         <title>Kira | Fullstack Developer</title>
       </Head>
-      <Banner />
+      <Hero />
       <AboutMe />
       <Portfolio />
       <Project />

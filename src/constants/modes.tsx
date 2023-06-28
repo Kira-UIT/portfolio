@@ -12,18 +12,3 @@ export const layoutModes = [
     value: "dark",
   },
 ];
-
-export const primaryColors = [
-  {
-    id: 1,
-    color: "bg-red-500",
-  },
-  {
-    id: 2,
-    color: "bg-primary",
-  },
-  {
-    id: 3,
-    color: "bg-yellow-500",
-  },
-];

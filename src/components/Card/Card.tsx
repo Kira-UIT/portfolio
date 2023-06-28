@@ -8,10 +8,16 @@ interface IProjectProps {
   title: string;
   description: string;
   thumbnail?: string;
+  link?: string;
 }
 
 const Card: FC<IProjectProps> = (props: IProjectProps) => {
-  const { title, description, thumbnail = "/thumbnail.jpg" } = props;
+  const {
+    title,
+    description,
+    thumbnail = "/thumbnail.jpg",
+    link = "/",
+  } = props;
   return (
     <div className="rounded-md border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
       <Link href="/">
@@ -26,8 +32,10 @@ const Card: FC<IProjectProps> = (props: IProjectProps) => {
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
           {description}
         </p>
-        <Link href="#portfolio">
-          <PrimaryButton icon={<RightArrowIcon width={20} height={20} />}>Read more</PrimaryButton>
+        <Link href={link}>
+          <PrimaryButton icon={<RightArrowIcon width={16} height={16} />}>
+            Read more
+          </PrimaryButton>
         </Link>
       </div>
     </div>

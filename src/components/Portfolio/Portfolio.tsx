@@ -1,3 +1,10 @@
+import {
+  BusinessIcon,
+  DurationIcon,
+  EducationIcon,
+  LinkIcon,
+  MajorIcon,
+} from "@/utils/medias";
 import Link from "next/link";
 import { FC } from "react";
 
@@ -14,34 +21,14 @@ const Portfolio: FC = () => {
         <div className="col-span-2 space-y-2 lg:col-span-1">
           <h2 className="mb-4 flex items-center justify-center text-xl font-semibold">
             <span className="text-primary transition-colors duration-500 ease-linear">
-              <svg
-                width="32"
-                height="32"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3Zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9ZM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72Z"></path>
-              </svg>
+              <EducationIcon width={24} height={24} />
             </span>
             <span className="ml-2">Education</span>
           </h2>
           <div className="p-4">
             <div className="flex items-center gap-4">
               <span className="text-2xl">
-                <svg
-                  width="32"
-                  height="32"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M12 7h10v14H2V3h10v4ZM4 19h2v-2H4v2Zm2-4H4v-2h2v2Zm-2-4h2V9H4v2Zm2-4H4V5h2v2Zm2 12h2v-2H8v2Zm2-4H8v-2h2v2Zm-2-4h2V9H8v2Zm2-4H8V5h2v2Zm10 12V9h-8v2h2v2h-2v2h2v2h-2v2h8Zm-2-8h-2v2h2v-2Zm-2 4h2v2h-2v-2Z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
+                <BusinessIcon width={24} height={24} />
               </span>
               <div className="flex items-center gap-2">
                 <span className="text-xl font-bold text-primary transition-colors duration-500 ease-linear">
@@ -52,53 +39,19 @@ const Portfolio: FC = () => {
                   target="_blank"
                   className="cursor-pointer hover:text-primary"
                 >
-                  <svg
-                    width="20"
-                    height="20"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M11 7H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-5"></path>
-                    <path d="M10 14 20 4"></path>
-                    <path d="M15 4h5v5"></path>
-                  </svg>
+                  <LinkIcon width={24} height={24} />
                 </Link>
               </div>
             </div>
             <div className="flex items-center gap-4">
               <span className="text-2xl">
-                <svg
-                  width="32"
-                  height="32"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M9 5H5v4H3V5c0-1.1.9-2 2-2h4v2ZM3 15h2v4h4v2H5c-1.1 0-2-.9-2-2v-4ZM19 3h-4v2h4v4h2V5c0-1.1-.9-2-2-2Zm-4 16h4v-4h2v4c0 1.1-.9 2-2 2h-4v-2ZM12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4Zm-2 4c0 1.1.9 2 2 2s2-.9 2-2-.9-2-2-2-2 .9-2 2Z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
+                <MajorIcon width={24} height={24} />
               </span>
               <span>Computer Networking And Communications</span>
             </div>
             <div className="flex items-center gap-4">
               <span className="text-2xl">
-                <svg
-                  width="32"
-                  height="32"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2ZM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8Zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7Z"></path>
-                </svg>
+                <DurationIcon width={24} height={24} />
               </span>
               <span>Aug, 2018 - Jun 2023</span>
             </div>

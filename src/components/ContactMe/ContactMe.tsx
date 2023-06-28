@@ -4,7 +4,7 @@ import { PrimaryButton } from "@/components";
 const ContactMe: FC = () => {
   return (
     <div id="contact-me" className="min-h-screen pt-16">
-      <div className="mx-auto max-w-screen-md px-4 py-8 lg:py-16">
+      <div className="mx-auto max-w-screen-md lg:py-16">
         <h2 className="mb-4 text-center text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
           Contact{" "}
           <span className="text-primary transition-colors duration-500 ease-linear">
@@ -16,7 +16,7 @@ const ContactMe: FC = () => {
         </p>
         <form
           action="#"
-          className="space-y-8 rounded-md border p-8 dark:bg-zinc-800"
+          className="space-y-8 rounded-md border p-5 dark:bg-zinc-800"
         >
           <div>
             <label
