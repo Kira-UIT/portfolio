@@ -20,7 +20,7 @@ const Header: FC = () => {
           {navigation.map((nav) => (
             <li
               key={nav.id}
-              className={`navigate-element relative px-4 transition-colors duration-300 after:absolute after:-bottom-[8%] after:left-1/2 after:h-[3px] after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 hover:text-primary hover:after:w-1/2 ${
+              className={`relative px-4 text-sm transition-colors duration-300 after:absolute after:-bottom-[8%] after:left-1/2 after:h-[3px] after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 hover:text-primary hover:after:w-1/2 ${
                 router.asPath === nav.path
                   ? " text-primary after:w-1/2"
                   : "after:w-0"

@@ -2,16 +2,31 @@ import { socialMedias } from "@/constants/socialMedias";
 import Link from "next/link";
 import { FC } from "react";
 import PrimaryButton from "../Button/PrimaryButton";
+import { RightArrowIcon } from "@/utils/medias";
 
 const Banner: FC = () => {
   return (
     <div
       id="banner"
-      className="banner flex min-h-screen flex-col-reverse items-center justify-center gap-8 lg:flex-row lg:justify-between"
+      className="relative flex min-h-screen flex-col-reverse items-center justify-center gap-8 lg:flex-row lg:justify-between"
     >
-      <div className="relative space-y-4">
+      <div className="area">
+        <ul className="circles">
+          <li className="bg-primary"></li>
+          <li className="bg-primary"></li>
+          <li className="bg-primary"></li>
+          <li className="bg-primary"></li>
+          <li className="bg-primary"></li>
+          <li className="bg-primary"></li>
+          <li className="bg-primary"></li>
+          <li className="bg-primary"></li>
+          <li className="bg-primary"></li>
+          <li className="bg-primary"></li>
+        </ul>
+      </div>
+      <div className="relative z-10 space-y-4">
         <h2 className="text-4xl">Hi, I&apos;m</h2>
-        <div className="relative text-5xl font-bold uppercase after:absolute after:content-['KIRA'] after:left-0 after:top-0 after:animate-water-animation after:text-5xl after:font-bold after:text-primary after:transition-colors after:duration-500 after:ease-linear md:text-9xl after:md:text-9xl">
+        <div className="relative text-5xl font-bold uppercase after:absolute after:left-0 after:top-0 after:animate-water-animation after:text-5xl after:font-bold after:text-primary after:transition-colors after:duration-500 after:ease-linear after:content-['KIRA'] md:text-9xl after:md:text-9xl">
           Kira
         </div>
         <h3 className="text-3xl font-bold text-primary transition-colors duration-500 ease-linear md:text-5xl">
@@ -36,10 +51,14 @@ const Banner: FC = () => {
         </div>
         <div className="flex flex-wrap gap-2">
           <Link href="#portfolio" replace>
-            <PrimaryButton>Explore my portfolio &#x27F6;</PrimaryButton>
+            <PrimaryButton icon={<RightArrowIcon width={20} height={20} />}>
+              Explore my portfolio
+            </PrimaryButton>
           </Link>
           <Link href="#contact-me" replace>
-            <PrimaryButton>Connect with me &#x27F6;</PrimaryButton>
+            <PrimaryButton icon={<RightArrowIcon width={20} height={20} />}>
+              Connect with me
+            </PrimaryButton>
           </Link>
         </div>
       </div>

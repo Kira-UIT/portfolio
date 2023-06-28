@@ -10,7 +10,7 @@ const Project: FC = () => {
       <p className="mb-8 text-center font-light text-gray-500 dark:text-gray-400 sm:text-xl lg:mb-16">
         My projects I have worked on.
       </p>
-      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
         <Card
           title="E-commerce"
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nihil commodi odio quaerat labore cum unde accusamus adipisci exercitationem optio vitae quidem, sint expedita alias deserunt ab consectetur? Animi, dolorem?"

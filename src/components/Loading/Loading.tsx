@@ -1,12 +1,19 @@
+import useLocalStorage from "@/hooks/useLocalStorage";
+import { NextPageContext } from "next";
 import React, { FC } from "react";
 
-const Loading: FC = () => {
+interface ILoadingProps {
+  preset?: string;
+}
+
+const Loading: FC<ILoadingProps> = ({ preset }) => {
   return (
-    <div className="fixed flex h-screen w-screen items-center justify-center">
+    <div
+      className={`${preset} fixed flex h-screen w-screen items-center justify-center`}
+    >
       <svg
-        
         aria-hidden="true"
-        className="mr-2 inline h-8 w-8 animate-spin fill-green-500 text-gray-200 dark:text-gray-600"
+        className="mr-2 inline h-8 w-8 animate-spin fill-[var(--primary-color)] text-gray-200 dark:text-gray-600"
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -26,3 +33,14 @@ const Loading: FC = () => {
 };
 
 export default Loading;
+
+export const getInitialProps = async (ctx: NextPageContext) => {
+  if (ctx.req) {
+    // server
+    return { page: {} };
+  } else {
+    const preset = localStorage.getItem("preset");
+    console.log(preset);
+    return { preset: preset };
+  }
+};

@@ -21,7 +21,7 @@ const Card: FC<IProjectProps> = (props: IProjectProps) => {
   return (
     <div className="rounded-md border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
       <Link href="/">
-        <Image src={thumbnail} alt="" width={600} height={500} />
+        <Image src={thumbnail} alt="" width={600} height={500} className="rounded-tl-md rounded-tr-md" />
       </Link>
       <div className="p-5">
         <Link href="/">
