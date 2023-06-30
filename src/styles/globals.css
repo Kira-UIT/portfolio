@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  .preset-green {
+  :root {
     --primary-color: #22c55e;
     --primary-color-hover: #16a34a;
     --gradient-color-first: #69ff97;
@@ -11,35 +11,42 @@
     --bubble-color: #22c55e 20%;
   }
 
-  .preset-sky {
+  [preset-color="green"] {
+    --primary-color: #22c55e;
+    --primary-color-hover: #16a34a;
+    --gradient-color-first: #69ff97;
+    --gradient-color-second: #00e4ff;
+  }
+
+  [preset-color="sky"] {
     --primary-color: #3b82f6;
     --primary-color-hover: #2563eb;
     --gradient-color-first: #4c83ff;
     --gradient-color-second: #2afadf;
   }
 
-  .preset-purple {
+  [preset-color="purple"] {
     --primary-color: #a855f7;
     --primary-color-hover: #9333ea;
     --gradient-color-first: #9f44d3;
     --gradient-color-second: #e2b0ff;
   }
 
-  .preset-blue {
+  [preset-color="blue"] {
     --primary-color: #0ea5e9;
     --primary-color-hover: #0284c7;
     --gradient-color-first: #130cb7;
     --gradient-color-second: #52e5e7;
   }
 
-  .preset-orange {
+  [preset-color="orange"] {
     --primary-color: #f97316;
     --primary-color-hover: #ea580c;
     --gradient-color-first: #de4313;
     --gradient-color-second: #fec163;
   }
 
-  .preset-red {
+  [preset-color="red"] {
     --primary-color: #ef4444;
     --primary-color-hover: #dc2626;
     --gradient-color-first: #e80505;

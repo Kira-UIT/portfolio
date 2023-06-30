@@ -1,4 +1,5 @@
 import { Loading } from "@/components";
+import useLocalStorage from "@/hooks/useLocalStorage";
 import "@/styles/globals.css";
 import { NextPage } from "next";
 import { ThemeProvider } from "next-themes";
@@ -21,14 +22,15 @@ Router.events.on("routeChangeError", (err, url, { shallow }) => {
 export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
   const [loading, setLoading] = useState(true);
+  const [preset] = useLocalStorage<string>("preset", "");
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2000);
-  }, []);
+    document.documentElement.setAttribute("preset-color", preset);
+  }, [preset]);
 
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      {!loading ? getLayout(<Component {...pageProps} />) : <Loading />}
+      {getLayout(<Component {...pageProps} />)}
     </ThemeProvider>
   );
 }

@@ -19,6 +19,12 @@ const ModeSettings: FC<IModeSettingsProps> = (props) => {
   const toggleOpenSettings = () => {
     setIsOpen(!isOpen);
   };
+
+  // function handle switching theme and storing them into local storage
+  const switchPreset = (value: string) => {
+    document.documentElement.setAttribute("preset-color", value);
+    setPreset(value);
+  };
   return (
     <div>
       {/* Settings */}
@@ -69,37 +75,37 @@ const ModeSettings: FC<IModeSettingsProps> = (props) => {
             <div className="grid grid-cols-3 gap-4">
               <div
                 className="flex h-14 w-full cursor-pointer items-center justify-center rounded-md border transition-all duration-300 ease-linear hover:bg-slate-100 dark:border-stone-50 dark:hover:bg-zinc-800"
-                onClick={() => setPreset("preset-green")}
+                onClick={() => switchPreset("green")}
               >
                 <div className="h-3 w-3 rounded-full bg-green-500" />
               </div>
               <div
                 className="flex h-14 w-full cursor-pointer items-center justify-center rounded-md border transition-all duration-300 ease-linear hover:bg-slate-100 dark:border-stone-50 dark:hover:bg-zinc-800"
-                onClick={() => setPreset("preset-sky")}
+                onClick={() => switchPreset("sky")}
               >
                 <div className="h-3 w-3 rounded-full bg-sky-500" />
               </div>
               <div
                 className="flex h-14 w-full cursor-pointer items-center justify-center rounded-md border transition-all duration-300 ease-linear hover:bg-slate-100 dark:border-stone-50 dark:hover:bg-zinc-800"
-                onClick={() => setPreset("preset-purple")}
+                onClick={() => switchPreset("purple")}
               >
                 <div className="h-3 w-3 rounded-full bg-purple-500" />
               </div>
               <div
                 className="flex h-14 w-full cursor-pointer items-center justify-center rounded-md border transition-all duration-300 ease-linear hover:bg-slate-100 dark:border-stone-50 dark:hover:bg-zinc-800"
-                onClick={() => setPreset("preset-blue")}
+                onClick={() => switchPreset("blue")}
               >
                 <div className="h-3 w-3 rounded-full bg-blue-500" />
               </div>
               <div
                 className="flex h-14 w-full cursor-pointer items-center justify-center rounded-md border transition-all duration-300 ease-linear hover:bg-slate-100 dark:border-stone-50 dark:hover:bg-zinc-800"
-                onClick={() => setPreset("preset-orange")}
+                onClick={() => switchPreset("orange")}
               >
                 <div className="h-3 w-3 rounded-full bg-orange-500" />
               </div>
               <div
                 className="flex h-14 w-full cursor-pointer items-center justify-center rounded-md border transition-all duration-300 ease-linear hover:bg-slate-100 dark:border-stone-50 dark:hover:bg-zinc-800"
-                onClick={() => setPreset("preset-red")}
+                onClick={() => switchPreset("red")}
               >
                 <div className="h-3 w-3 rounded-full bg-red-500" />
               </div>

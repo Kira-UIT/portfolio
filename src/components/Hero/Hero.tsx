@@ -4,7 +4,7 @@ import { FC } from "react";
 import PrimaryButton from "../Button/PrimaryButton";
 import { RightArrowIcon } from "@/utils/medias";
 
-const Banner: FC = () => {
+const Hero: FC = () => {
   return (
     <>
       <div className="area">
@@ -22,13 +22,16 @@ const Banner: FC = () => {
         </ul>
       </div>
       <div
-        id="banner"
+        id="hero"
         className="relative flex min-h-screen flex-col-reverse items-center justify-center gap-8 lg:flex-row lg:justify-between"
       >
-        <div className="relative z-10 space-y-4">
+        <div className="relative space-y-4">
           <h2 className="text-4xl">Hi, I&apos;m</h2>
-          <div className="relative text-5xl font-bold uppercase after:absolute after:left-0 after:top-0 after:animate-water-animation after:text-5xl after:font-bold after:text-primary after:transition-colors after:duration-500 after:ease-linear after:content-['KIRA'] md:text-9xl after:md:text-9xl">
+          <div className="relative inline-block text-5xl font-bold md:text-9xl w-fit">
             Kira
+            <div className="absolute inline-block left-0 top-0 w-fit animate-water-animation text-5xl font-bold text-primary transition-colors duration-500 ease-linear content-['Kira'] md:text-9xl">
+              Kira
+            </div>
           </div>
           <h3 className="text-3xl font-bold text-primary transition-colors duration-500 ease-linear md:text-5xl">
             Full Stack Developer
@@ -71,4 +74,4 @@ const Banner: FC = () => {
   );
 };
 
-export default Banner;
+export default Hero;

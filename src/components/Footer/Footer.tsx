@@ -10,10 +10,10 @@ const Footer: FC = () => {
           +84 869 385 565
         </Link>
         <Link
-          href="mailto:thiennguyen.fsd@gmail.com"
+          href="mailto:Kiranguyen.fsd@gmail.com"
           className="hover:text-primary"
         >
-          thiennguyen.fsd@gmail.com
+          Kiranguyen.fsd@gmail.com
         </Link>
       </address>
     </footer>
